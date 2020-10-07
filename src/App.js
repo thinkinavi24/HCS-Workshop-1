@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import EducationScreen from "./views/Education/Education";
 import AboutScreen from "./views/About/About";
 import ExperienceScreen from "./views/Experience/Experience";
-import ProjectsScreen from "./views/Projects/Projects";
 
 import Navbar from "./components/Navbar/Navbar";
 
-function App() {
+function App() { 
   return (
     <div
       style={{
@@ -23,7 +23,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/experience" component={ExperienceScreen} />
-          <Route path="/projects" component={ProjectsScreen} />
+          <Route path="/education" component={EducationScreen} />
           <Route path={["/about", "/"]} component={AboutScreen} />
         </Switch>
       </Router>
